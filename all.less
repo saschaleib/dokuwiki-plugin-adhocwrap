@@ -1,0 +1,91 @@
+/**
+ * This contains the content styling
+ * @author Sascha Leib <sascha@leib.be>
+ */
+ 
+ main {
+	.info, .tip, .important, .alert, .help, .download, .todo {
+		border: transparent solid 2pt;
+		border-left-width: 1.5em;
+		padding: 1pt .5em;
+		margin: .5em 0;
+		position: relative;
+	}
+	.info::before, .tip::before, .important::before,
+	.alert::before, .help::before, .download::before,
+	.todo::before {
+		content: ' ';
+		background: transparent center/1em no-repeat;
+		position: absolute;
+		width: 1em;
+		height: 1em;
+		left: -1.25em;
+		right: initial;
+		top: .1em;
+		filter: opacity(90%);
+	}
+	
+	.info { border-color: #B0BEC5; }
+	.info::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTExLDlIMTNWN0gxMU0xMiwyMEM3LjU5LDIwIDQsMTYuNDEgNCwxMkM0LDcuNTkgNy41OSw0IDEyLDRDMTYuNDEsNCAyMCw3LjU5IDIwLDEyQzIwLDE2LjQxIDE2LjQxLDIwIDEyLDIwTTEyLDJBMTAsMTAgMCAwLDAgMiwxMkExMCwxMCAwIDAsMCAxMiwyMkExMCwxMCAwIDAsMCAyMiwxMkExMCwxMCAwIDAsMCAxMiwyTTExLDE3SDEzVjExSDExVjE3WiIgLz48L3N2Zz4=");}
+	
+	.tip { border-color: #FFCA28; }
+	.tip::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIwLDExSDIzVjEzSDIwVjExTTEsMTFINFYxM0gxVjExTTEzLDFWNEgxMVYxSDEzTTQuOTIsMy41TDcuMDUsNS42NEw1LjYzLDcuMDVMMy41LDQuOTNMNC45MiwzLjVNMTYuOTUsNS42M0wxOS4wNywzLjVMMjAuNSw0LjkzTDE4LjM3LDcuMDVMMTYuOTUsNS42M00xMiw2QTYsNiAwIDAsMSAxOCwxMkMxOCwxNC4yMiAxNi43OSwxNi4xNiAxNSwxNy4yVjE5QTEsMSAwIDAsMSAxNCwyMEgxMEExLDEgMCAwLDEgOSwxOVYxNy4yQzcuMjEsMTYuMTYgNiwxNC4yMiA2LDEyQTYsNiAwIDAsMSAxMiw2TTE0LDIxVjIyQTEsMSAwIDAsMSAxMywyM0gxMUExLDEgMCAwLDEgMTAsMjJWMjFIMTRNMTEsMThIMTNWMTUuODdDMTQuNzMsMTUuNDMgMTYsMTMuODYgMTYsMTJBNCw0IDAgMCwwIDEyLDhBNCw0IDAgMCwwIDgsMTJDOCwxMy44NiA5LjI3LDE1LjQzIDExLDE1Ljg3VjE4WiIgLz48L3N2Zz4=");}
+	
+	.important { border-color: #FF9800; }
+	.important::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyLDJMMSwyMUgyM00xMiw2TDE5LjUzLDE5SDQuNDdNMTEsMTBWMTRIMTNWMTBNMTEsMTZWMThIMTNWMTYiIC8+PC9zdmc+");}
+
+	.alert { border-color: #E53935; }
+	.alert::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTguMjcsM0wzLDguMjdWMTUuNzNMOC4yNywyMUgxNS43M0MxNy41LDE5LjI0IDIxLDE1LjczIDIxLDE1LjczVjguMjdMMTUuNzMsM005LjEsNUgxNC45TDE5LDkuMVYxNC45TDE0LjksMTlIOS4xTDUsMTQuOVY5LjFNMTEsMTVIMTNWMTdIMTFWMTVNMTEsN0gxM1YxM0gxMVY3IiAvPjwvc3ZnPg==");}
+
+	.help { border-color: #7986CB; }
+	.help::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTExLDE4SDEzVjE2SDExVjE4TTEyLDJBMTAsMTAgMCAwLDAgMiwxMkExMCwxMCAwIDAsMCAxMiwyMkExMCwxMCAwIDAsMCAyMiwxMkExMCwxMCAwIDAsMCAxMiwyTTEyLDIwQzcuNTksMjAgNCwxNi40MSA0LDEyQzQsNy41OSA3LjU5LDQgMTIsNEMxNi40MSw0IDIwLDcuNTkgMjAsMTJDMjAsMTYuNDEgMTYuNDEsMjAgMTIsMjBNMTIsNkE0LDQgMCAwLDAgOCwxMEgxMEEyLDIgMCAwLDEgMTIsOEEyLDIgMCAwLDEgMTQsMTBDMTQsMTIgMTEsMTEuNzUgMTEsMTVIMTNDMTMsMTIuNzUgMTYsMTIuNSAxNiwxMEE0LDQgMCAwLDAgMTIsNloiIC8+PC9zdmc+");}
+
+	.download { border-color: #43A047; }
+	.download::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTUsMjBIMTlWMThINU0xOSw5SDE1VjNIOVY5SDVMMTIsMTZMMTksOVoiIC8+PC9zdmc+");}
+	
+	.todo { border-color: #4DD0E1; }
+	.todo::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE3IDE1TDE4IDE5SDIxVjIySDNWMTlINkw3IDE1SDE3TTE1IDhMMTYgMTJIOEw5IDhIMTVNMTMgMUwxNCA1SDEwTDExIDFIMTNaIiAvPjwvc3ZnPg==");}
+}
+
+/* RTL Overrides */
+[dir=rtl] main .info, main *[dir=rtl] .info, main .info[dir=rtl],
+[dir=rtl] main .tip, main *[dir=rtl] .tip, main .tip[dir=rtl],
+[dir=rtl] main .important, main *[dir=rtl] .important, main .important[dir=rtl],
+[dir=rtl] main .alert, main *[dir=rtl] .alert, main .alert[dir=rtl],
+[dir=rtl] main .help, main *[dir=rtl] .help, main .help[dir=rtl],
+[dir=rtl] main .download, main *[dir=rtl] .download, main .download[dir=rtl],
+[dir=rtl] main .todo, main *[dir=rtl] .todo, main .todo[dir=rtl] {
+	border-width: 2pt 1.5em 2pt 2pt;
+}
+[dir=rtl] main .info::before, main *[dir=rtl] .info::before, main .info[dir=rtl]::before,
+[dir=rtl] main .tip::before, main *[dir=rtl] .tip::before, main .tip[dir=rtl]::before,
+[dir=rtl] main .important::before, main *[dir=rtl] .important::before, main .important[dir=rtl]::before,
+[dir=rtl] main .alert::before, main *[dir=rtl] .alert::before, main .alert[dir=rtl]::before,
+[dir=rtl] main .help::before, main *[dir=rtl] .help::before, main .help[dir=rtl]::before,
+[dir=rtl] main .download::before, main *[dir=rtl] .download::before, main .download[dir=rtl]::before,
+[dir=rtl] main .todo::before, main *[dir=rtl] .todo::before, main .todo[dir=rtl]::before {
+	left: initial;
+	right: -1.25em;
+}
+
+/* dark mode overrides */
+@media (prefers-color-scheme: dark) {
+
+	body.darkmode {
+		main {
+			.info { border-color: #546E7A; }
+			.tip { border-color: #F9A825; }
+			.important { border-color: #E65100; }
+			.alert { border-color: #B71C1C; }
+			.help { border-color: #1A237E; }
+			.download { border-color: #1B5E20; }
+			.todo { border-color: #006064; }
+			
+			.info::before, .alert::before,
+			.help::before, .download::before,
+			.todo::before { filter: invert(100%) opacity(80%); }
+
+			.tip::before, .important::before { filter: opacity(80%); }
+		}
+	}
+}
