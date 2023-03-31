@@ -4,7 +4,7 @@
  */
  
  main {
-	.info, .tip, .important, .alert, .help, .download, .todo {
+	.outline, .info, .tip, .important, .alert, .help, .download, .todo {
 		border: transparent solid 2pt;
 		border-left-width: 1.5em;
 		padding: 1pt .5em;
@@ -25,26 +25,37 @@
 		filter: opacity(90%);
 	}
 	
+	.outline { border: #CCC solid 2pt; }
+	.outline.filled { background-color: #EEE; }
+
 	.info { border-color: #B0BEC5; }
 	.info::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTExLDlIMTNWN0gxMU0xMiwyMEM3LjU5LDIwIDQsMTYuNDEgNCwxMkM0LDcuNTkgNy41OSw0IDEyLDRDMTYuNDEsNCAyMCw3LjU5IDIwLDEyQzIwLDE2LjQxIDE2LjQxLDIwIDEyLDIwTTEyLDJBMTAsMTAgMCAwLDAgMiwxMkExMCwxMCAwIDAsMCAxMiwyMkExMCwxMCAwIDAsMCAyMiwxMkExMCwxMCAwIDAsMCAxMiwyTTExLDE3SDEzVjExSDExVjE3WiIgLz48L3N2Zz4=");}
+	.info.filled { background-color: #CFD8DC; }
 	
 	.tip { border-color: #FFCA28; }
 	.tip::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIwLDExSDIzVjEzSDIwVjExTTEsMTFINFYxM0gxVjExTTEzLDFWNEgxMVYxSDEzTTQuOTIsMy41TDcuMDUsNS42NEw1LjYzLDcuMDVMMy41LDQuOTNMNC45MiwzLjVNMTYuOTUsNS42M0wxOS4wNywzLjVMMjAuNSw0LjkzTDE4LjM3LDcuMDVMMTYuOTUsNS42M00xMiw2QTYsNiAwIDAsMSAxOCwxMkMxOCwxNC4yMiAxNi43OSwxNi4xNiAxNSwxNy4yVjE5QTEsMSAwIDAsMSAxNCwyMEgxMEExLDEgMCAwLDEgOSwxOVYxNy4yQzcuMjEsMTYuMTYgNiwxNC4yMiA2LDEyQTYsNiAwIDAsMSAxMiw2TTE0LDIxVjIyQTEsMSAwIDAsMSAxMywyM0gxMUExLDEgMCAwLDEgMTAsMjJWMjFIMTRNMTEsMThIMTNWMTUuODdDMTQuNzMsMTUuNDMgMTYsMTMuODYgMTYsMTJBNCw0IDAgMCwwIDEyLDhBNCw0IDAgMCwwIDgsMTJDOCwxMy44NiA5LjI3LDE1LjQzIDExLDE1Ljg3VjE4WiIgLz48L3N2Zz4=");}
+	.tip.filled { background-color: #FFF9C4; }
 	
 	.important { border-color: #FF9800; }
 	.important::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyLDJMMSwyMUgyM00xMiw2TDE5LjUzLDE5SDQuNDdNMTEsMTBWMTRIMTNWMTBNMTEsMTZWMThIMTNWMTYiIC8+PC9zdmc+");}
+	.important.filled { background-color: #FFE0B2; }
 
-	.alert { border-color: #E53935; }
-	.alert::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTguMjcsM0wzLDguMjdWMTUuNzNMOC4yNywyMUgxNS43M0MxNy41LDE5LjI0IDIxLDE1LjczIDIxLDE1LjczVjguMjdMMTUuNzMsM005LjEsNUgxNC45TDE5LDkuMVYxNC45TDE0LjksMTlIOS4xTDUsMTQuOVY5LjFNMTEsMTVIMTNWMTdIMTFWMTVNMTEsN0gxM1YxM0gxMVY3IiAvPjwvc3ZnPg==");}
+	.alert { border-color: #B71C1C; }
+	.alert::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTguMjcsM0wzLDguMjdWMTUuNzNMOC4yNywyMUgxNS43M0MxNy41LDE5LjI0IDIxLDE1LjczIDIxLDE1LjczVjguMjdMMTUuNzMsM005LjEsNUgxNC45TDE5LDkuMVYxNC45TDE0LjksMTlIOS4xTDUsMTQuOVY5LjFNMTEsMTVIMTNWMTdIMTFWMTVNMTEsN0gxM1YxM0gxMVY3IiAvPjwvc3ZnPg==");
+	 filter: invert(100%) opacity(90%);}
+	.alert.filled { background-color: #FFCDD2; }
 
 	.help { border-color: #7986CB; }
 	.help::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTExLDE4SDEzVjE2SDExVjE4TTEyLDJBMTAsMTAgMCAwLDAgMiwxMkExMCwxMCAwIDAsMCAxMiwyMkExMCwxMCAwIDAsMCAyMiwxMkExMCwxMCAwIDAsMCAxMiwyTTEyLDIwQzcuNTksMjAgNCwxNi40MSA0LDEyQzQsNy41OSA3LjU5LDQgMTIsNEMxNi40MSw0IDIwLDcuNTkgMjAsMTJDMjAsMTYuNDEgMTYuNDEsMjAgMTIsMjBNMTIsNkE0LDQgMCAwLDAgOCwxMEgxMEEyLDIgMCAwLDEgMTIsOEEyLDIgMCAwLDEgMTQsMTBDMTQsMTIgMTEsMTEuNzUgMTEsMTVIMTNDMTMsMTIuNzUgMTYsMTIuNSAxNiwxMEE0LDQgMCAwLDAgMTIsNloiIC8+PC9zdmc+");}
+	.help.filled { background-color: #E8EAF6; }
 
 	.download { border-color: #66BB6A; }
 	.download::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTUsMjBIMTlWMThINU0xOSw5SDE1VjNIOVY5SDVMMTIsMTZMMTksOVoiIC8+PC9zdmc+");}
+	.download.filled { background-color: #E8F5E9; }
 	
 	.todo { border-color: #4DD0E1; }
 	.todo::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE3IDE1TDE4IDE5SDIxVjIySDNWMTlINkw3IDE1SDE3TTE1IDhMMTYgMTJIOEw5IDhIMTVNMTMgMUwxNCA1SDEwTDExIDFIMTNaIiAvPjwvc3ZnPg==");}
+	.todo.filled { background-color: #E0F7FA; }
 	
 	/* text colours: */
 	.yellow { color: #F9A825; }
@@ -57,19 +68,32 @@
 	.cyan { color: #006064; }
 	.teal { color: #004D40; }
 	.green { color: #1B5E20; }
+	.grey, .gray { color: #37474F; }
 	
 	/* special case: markers: */
-	mark.yellow { background-color: #FFF176; color: @ini_text; }
-	mark.orange { background-color: #FFB74D; color: @ini_text; }
-	mark.brown { background-color: #BCAAA4; color: @ini_text; }
-	mark.red { background-color: #E57373; color: @ini_text; }
-	mark.purple { background-color: #CE93D8; color: @ini_text; }
-	mark.indigo { background-color: #9FA8DA; color: @ini_text; }
-	mark.blue { background-color: #64B5F6; color: @ini_text; }
-	mark.cyan { background-color: #4DD0E1; color: @ini_text; }
-	mark.teal { background-color: #4DB6AC; color: @ini_text; }
-	mark.green { background-color: #81C784; color: @ini_text; }
+	mark.yellow { background-color: #FFF176; color: #111; }
+	mark.orange { background-color: #FFB74D; color: #111; }
+	mark.brown { background-color: #BCAAA4; color: #111; }
+	mark.red { background-color: #E57373; color: #111; }
+	mark.purple { background-color: #CE93D8; color: #111; }
+	mark.indigo { background-color: #9FA8DA; color: #111; }
+	mark.blue { background-color: #64B5F6; color: #111; }
+	mark.cyan { background-color: #4DD0E1; color: #111; }
+	mark.teal { background-color: #4DB6AC; color: #111; }
+	mark.green { background-color: #81C784; color: #111; }
+	mark.grey, mark.gray { background-color: #B0BEC5; color: #111; }
+
+	/* rounded corners */
+	.rounded { border-radius: .5em; }
 	
+	/* grid-layout classes */
+	.grid-2-columns {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: .5em;
+	}
+	
+
 }
 
 /* RTL Overrides */
@@ -98,6 +122,7 @@
 
 	body.darkmode {
 		main {
+			.outline { border-color: #ADADB3; }
 			.info { border-color: #546E7A; }
 			.tip { border-color: #F9A825; }
 			.important { border-color: #E65100; }
@@ -105,6 +130,15 @@
 			.help { border-color: #1A237E; }
 			.download { border-color: #1B5E20; }
 			.todo { border-color: #006064; }
+			
+			.outline.filled { background-color: #39393D; }
+			.info.filled { background-color: #2F353B; }
+			.tip.filled { background-color: #46361e; }
+			.important.filled { background-color: #532E1D; }
+			.alert.filled { background-color: #482124; }
+			.help.filled { background-color: #20233C; }
+			.download.filled { background-color: #203125; }
+			.todo.filled { background-color: #1A3236; }
 			
 			.info::before, .alert::before,
 			.help::before, .download::before,
@@ -123,18 +157,20 @@
 			.cyan { color: #00BCD4; }
 			.teal { color: #009688; }
 			.green { color: #388E3C; }
+			.grey, .gray { color: #607D8B; }
 
 			/* special case: markers: */
-			mark.yellow { background-color: #845800; color: @ini_text_dark; }
-			mark.orange { background-color: #E65100; color: @ini_text_dark; }
-			mark.brown { background-color: #4E342E; color: @ini_text_dark; }
-			mark.red { background-color: #B71C1C; color: @ini_text_dark; }
-			mark.purple { background-color: #6A1B9A; color: @ini_text_dark; }
-			mark.indigo { background-color: #1A237E; color: @ini_text_dark; }
-			mark.blue { background-color: #0D47A1; color: @ini_text_dark; }
-			mark.cyan { background-color: #006064; color: @ini_text_dark; }
-			mark.teal { background-color: #004D40; color: @ini_text_dark; }
-			mark.green { background-color: #1B5E20; color: @ini_text_dark; }
+			mark.yellow { background-color: #845800; color: #CCC; }
+			mark.orange { background-color: #E65100; color: #CCC; }
+			mark.brown { background-color: #4E342E; color: #CCC; }
+			mark.red { background-color: #B71C1C; color: #CCC; }
+			mark.purple { background-color: #6A1B9A; color: #CCC; }
+			mark.indigo { background-color: #1A237E; color: #CCC; }
+			mark.blue { background-color: #0D47A1; color: #CCC; }
+			mark.cyan { background-color: #006064; color: #CCC; }
+			mark.teal { background-color: #004D40; color: #CCC; }
+			mark.green { background-color: #1B5E20; color: #CCC; }
+			mark.grey, mark.gray { background-color: #37474F; color: #CCC; }
 
 		}
 	}
