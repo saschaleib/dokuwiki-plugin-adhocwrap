@@ -57,6 +57,15 @@
 	.todo::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE3IDE1TDE4IDE5SDIxVjIySDNWMTlINkw3IDE1SDE3TTE1IDhMMTYgMTJIOEw5IDhIMTVNMTMgMUwxNCA1SDEwTDExIDFIMTNaIiAvPjwvc3ZnPg==");}
 	.todo.filled { background-color: #E0F7FA; }
 	
+	/* notch down the icons for selected block-level elements: */
+	div.info::before, div.tip::before, div.important::before, div.alert::before, div.help::before, div.download::before, div.todo::before,
+	article.info::before, article.tip::before, article.important::before, article.alert::before, article.help::before, article.download::before, article.todo::before,
+	aside.info::before, aside.tip::before, aside.important::before, aside.alert::before, aside.help::before, aside.download::before, aside.todo::before,
+	section.info::before, section.tip::before, section.important::before, section.alert::before, section.help::before, section.download::before, section.todo::before,
+	figure.info::before, figure.tip::before, figure.important::before, figure.alert::before, figure.help::before, figure.download::before, figure.todo {
+		top: .35em;
+	}
+
 	/* text colours: */
 	.yellow { color: #F9A825; }
 	.orange { color: #E65100; }
