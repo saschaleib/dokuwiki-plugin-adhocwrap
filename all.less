@@ -5,6 +5,7 @@
  
  main {
 	.outline, .info, .tip, .important, .alert, .help, .download, .todo {
+		box-sizing: border-box;
 		border: transparent solid 2pt;
 		border-left-width: 1.5em;
 		padding: 1pt .5em;
@@ -28,9 +29,9 @@
 	.outline { border: #CCC solid 2pt; }
 	.outline.filled { background-color: #EEE; }
 
-	.info { border-color: #B0BEC5; }
+	.info { border-color: #CCC; }
 	.info::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTExLDlIMTNWN0gxMU0xMiwyMEM3LjU5LDIwIDQsMTYuNDEgNCwxMkM0LDcuNTkgNy41OSw0IDEyLDRDMTYuNDEsNCAyMCw3LjU5IDIwLDEyQzIwLDE2LjQxIDE2LjQxLDIwIDEyLDIwTTEyLDJBMTAsMTAgMCAwLDAgMiwxMkExMCwxMCAwIDAsMCAxMiwyMkExMCwxMCAwIDAsMCAyMiwxMkExMCwxMCAwIDAsMCAxMiwyTTExLDE3SDEzVjExSDExVjE3WiIgLz48L3N2Zz4=");}
-	.info.filled { background-color: #CFD8DC; }
+	.info.filled { background-color: #EEE; }
 	
 	.tip { border-color: #FFCA28; }
 	.tip::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIwLDExSDIzVjEzSDIwVjExTTEsMTFINFYxM0gxVjExTTEzLDFWNEgxMVYxSDEzTTQuOTIsMy41TDcuMDUsNS42NEw1LjYzLDcuMDVMMy41LDQuOTNMNC45MiwzLjVNMTYuOTUsNS42M0wxOS4wNywzLjVMMjAuNSw0LjkzTDE4LjM3LDcuMDVMMTYuOTUsNS42M00xMiw2QTYsNiAwIDAsMSAxOCwxMkMxOCwxNC4yMiAxNi43OSwxNi4xNiAxNSwxNy4yVjE5QTEsMSAwIDAsMSAxNCwyMEgxMEExLDEgMCAwLDEgOSwxOVYxNy4yQzcuMjEsMTYuMTYgNiwxNC4yMiA2LDEyQTYsNiAwIDAsMSAxMiw2TTE0LDIxVjIyQTEsMSAwIDAsMSAxMywyM0gxMUExLDEgMCAwLDEgMTAsMjJWMjFIMTRNMTEsMThIMTNWMTUuODdDMTQuNzMsMTUuNDMgMTYsMTMuODYgMTYsMTJBNCw0IDAgMCwwIDEyLDhBNCw0IDAgMCwwIDgsMTJDOCwxMy44NiA5LjI3LDE1LjQzIDExLDE1Ljg3VjE4WiIgLz48L3N2Zz4=");}
@@ -67,8 +68,8 @@
 	}
 
 	/* text colours: */
-	.yellow { color: #F9A825; }
-	.orange { color: #E65100; }
+	.yellow { color: #966C03; }
+	.orange { color: #B24103; }
 	.brown { color: #3E2723; }
 	.red { color: #B71C1C; }
 	.purple { color: #4A148C; }
@@ -96,12 +97,26 @@
 	.rounded { border-radius: .5em; }
 	
 	/* grid-layout classes */
-	.grid-2-columns {
+	.grid-2-columns,
+	.grid-3-columns,
+	.grid-4-columns {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-gap: .5em;
+		grid-gap: 0 .5em;
 	}
-	
+	.grid-2-columns {
+		grid-template-columns: 1fr 1fr;
+	}
+	.grid-3-columns {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.grid-4-columns {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	/* grid cell classes: */
+	.colspan-2 { grid-column-end: span 2; }
+	.colspan-3 { grid-column-end: span 3; }
+	.colspan-4 { grid-column-end: span 4; }
 
 }
 
@@ -132,10 +147,10 @@
 	body.darkmode {
 		main {
 			.outline { border-color: #ADADB3; }
-			.info { border-color: #546E7A; }
+			.info { border-color: #754E00; }
 			.tip { border-color: #F9A825; }
-			.important { border-color: #E65100; }
-			.alert { border-color: #B71C1C; }
+			.important { border-color: #943400; }
+			.alert { border-color: #A81A1A; }
 			.help { border-color: #1A237E; }
 			.download { border-color: #1B5E20; }
 			.todo { border-color: #006064; }
@@ -158,21 +173,21 @@
 			/* text colours: */
 			.yellow { color: #FDD835; }
 			.orange { color: #FB8C00; }
-			.brown { color: #8D6E63; }
-			.red { color: #E53935; }
-			.purple { color: #AB47BC; }
-			.indigo { color: #5C6BC0; }
-			.blue { color: #1976D2; }
+			.brown { color: #A5847E; }
+			.red { color: #FF4314; }
+			.purple { color: #BC6DCA; }
+			.indigo { color: #7986CB; }
+			.blue { color: #42A5F5; }
 			.cyan { color: #00BCD4; }
-			.teal { color: #009688; }
-			.green { color: #388E3C; }
-			.grey, .gray { color: #607D8B; }
+			.teal { color: #26A69A; }
+			.green { color: #43A047; }
+			.grey, .gray { color: #78909C; }
 
 			/* special case: markers: */
-			mark.yellow { background-color: #845800; color: #CCC; }
-			mark.orange { background-color: #E65100; color: #CCC; }
+			mark.yellow { background-color: #754E00; color: #CCC; }
+			mark.orange { background-color: #943400; color: #CCC; }
 			mark.brown { background-color: #4E342E; color: #CCC; }
-			mark.red { background-color: #B71C1C; color: #CCC; }
+			mark.red { background-color: #A81A1A; color: #CCC; }
 			mark.purple { background-color: #6A1B9A; color: #CCC; }
 			mark.indigo { background-color: #1A237E; color: #CCC; }
 			mark.blue { background-color: #0D47A1; color: #CCC; }
@@ -181,6 +196,26 @@
 			mark.green { background-color: #1B5E20; color: #CCC; }
 			mark.grey, mark.gray { background-color: #37474F; color: #CCC; }
 
+		}
+	}
+}
+
+/* layout overrides for narrow screens: */
+@media (max-width: 670px) {
+	main {
+		.grid-2-columns,
+		.grid-3-columns {
+			grid-template-columns: 100%;
+		}
+		.grid-4-columns {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+@media (max-width: 440px) {
+	main {
+		.grid-4-columns {
+			grid-template-columns: 100%;
 		}
 	}
 }
