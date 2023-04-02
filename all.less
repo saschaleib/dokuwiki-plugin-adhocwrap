@@ -5,6 +5,7 @@
  
  main {
 	.outline, .info, .tip, .important, .alert, .help, .download, .todo {
+		background-image: none;
 		box-sizing: border-box;
 		border: @ini_border solid 1px;
 		border-left-width: 4pt;
@@ -59,7 +60,7 @@
 	aside.info, aside.tip, aside.important, aside.alert, aside.help, aside.download, aside.todo,
 	section.info, section.tip, section.important, section.alert, section.help, section.download, section.todo,
 	figure.info, figure.tip, figure.important, figure.alert, figure.help, figure.download, figure.todo {
-		padding: .5em .5em .75em 2em;
+		padding: .5em 1em .75em 2em;
 	}
 	
 	/* notch down the icons for selected block-level elements: */
@@ -69,7 +70,8 @@
 	section.info::before, section.tip::before, section.important::before, section.alert::before, section.help::before, section.download::before, section.todo::before,
 	figure.info::before, figure.tip::before, figure.important::before, figure.alert::before, figure.help::before, figure.download::before, figure.todo::before {
 		left: .45em;
-		top: 1em;
+		right: .45em;
+		top: 1.25em;
 	}
 
 	/* text colours: */
@@ -131,7 +133,8 @@
 [dir=rtl] main .help, main *[dir=rtl] .help, main .help[dir=rtl],
 [dir=rtl] main .download, main *[dir=rtl] .download, main .download[dir=rtl],
 [dir=rtl] main .todo, main *[dir=rtl] .todo, main .todo[dir=rtl] {
-	border-width: 2pt 1.5em 2pt 2pt;
+	padding: 1pt 1.5em 1pt .25em;
+	border-width: 1px 4pt 1px 1px;
 }
 [dir=rtl] main .info::before, main *[dir=rtl] .info::before, main .info[dir=rtl]::before,
 [dir=rtl] main .tip::before, main *[dir=rtl] .tip::before, main .tip[dir=rtl]::before,
@@ -140,9 +143,19 @@
 [dir=rtl] main .help::before, main *[dir=rtl] .help::before, main .help[dir=rtl]::before,
 [dir=rtl] main .download::before, main *[dir=rtl] .download::before, main .download[dir=rtl]::before,
 [dir=rtl] main .todo::before, main *[dir=rtl] .todo::before, main .todo[dir=rtl]::before {
-	left: initial;
-	right: -1.25em;
+	right: .25em;
 }
+
+	/* notch down the icons for selected block-level elements: */
+	div.info::before, div.tip::before, div.important::before, div.alert::before, div.help::before, div.download::before, div.todo::before,
+	article.info::before, article.tip::before, article.important::before, article.alert::before, article.help::before, article.download::before, article.todo::before,
+	aside.info::before, aside.tip::before, aside.important::before, aside.alert::before, aside.help::before, aside.download::before, aside.todo::before,
+	section.info::before, section.tip::before, section.important::before, section.alert::before, section.help::before, section.download::before, section.todo::before,
+	figure.info::before, figure.tip::before, figure.important::before, figure.alert::before, figure.help::before, figure.download::before, figure.todo::before {
+		left: .45em;
+		top: 1.25em;
+	}
+
 
 /* dark mode overrides */
 @media (prefers-color-scheme: dark) {
@@ -154,7 +167,7 @@
 				border-color: #39393D #39393D #39393D inherit;
 			}
 			.outline { border-color: #ADADB3; }
-			.info { border-color: #027BDF; background-color: #182631; }
+			.info { border-color: #027BDF; background-color: #182631; color: inherit; }
 			.tip { border-color: #F9A825; background-color: #46361e; }
 			.important { border-color: #E57403; background-color: #532E1D; }
 			.alert { border-color: #FF2A2A; background-color: #482124; }
