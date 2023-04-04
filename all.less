@@ -4,7 +4,26 @@
  */
  
  main {
-	.outline, .info, .tip, .important, .alert, .help, .download, .todo {
+	/* simplified spacing in boxes: */
+	.outline > *, .box > *, .info > *, .tip > *, .important > *,
+	.alert > *, .help > *, .download > *, .todo > * {
+		margin: .5em 0;
+	}
+
+	/* plain box and outline are different from the other styles: */
+	.outline, .box {
+		padding: .25em 1em .5em 1em;
+		margin: 1em 0;
+	}
+	.outline {
+		border: @ini_border solid 2pt;
+	}
+	.box {
+		background-color: @ini_background_alt;
+	}
+
+	/* icon-box classes: */
+	.info, .tip, .important, .alert, .help, .download, .todo {
 		background-image: none;
 		box-sizing: border-box;
 		border: @ini_border solid 1px;
@@ -53,6 +72,18 @@
 	
 	.todo { border-left-color: #4DD0E1; background-color: #E0F7FA; }
 	.todo::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE3IDE1TDE4IDE5SDIxVjIySDNWMTlINkw3IDE1SDE3TTE1IDhMMTYgMTJIOEw5IDhIMTVNMTMgMUwxNCA1SDEwTDExIDFIMTNaIiBzdHlsZT0iZmlsbDojRjQ1MTFFOyIgLz48L3N2Zz4=");}
+	
+	/* modify spacing around headlines within blocks */
+	.outline h1, .outline h2, .outline h3, .outline h4, .outline h5, .outline h6, 
+	.info h1, .info h2, .info h3, .info h4, .info h5, .info h6, 
+	.tip h1, .tip h2, .tip h3, .tip h4, .tip h5, .tip h6, 
+	.important h1, .important h2, .important h3, .important h4, .important h5, .important h6, 
+	.alert h1, .alert h2, .alert h3, .alert h4, .alert h5, .alert h6, 
+	.help h1, .help h2, .help h3, .help h4, .help h5, .help h6, 
+	.download h1, .download h2, .download h3, .download h4, .download h5, .download h6, 
+	.todo h1, .todo h2, .todo h3, .todo h4, .todo h5, .todo h6 {
+		margin: 6pt 0;
+	}
 	
 	/* extra spacing for selected block-level elements: */
 	div.info, div.tip, div.important, div.alert, div.help, div.download, div.todo,
@@ -122,6 +153,9 @@
 	.colspan-2 { grid-column-end: span 2; }
 	.colspan-3 { grid-column-end: span 3; }
 	.colspan-4 { grid-column-end: span 4; }
+	.rowspan-2 { grid-row-end: span 2; }
+	.rowspan-3 { grid-row-end: span 3; }
+	.rowspan-4 { grid-row-end: span 4; }
 
 }
 
