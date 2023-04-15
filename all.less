@@ -12,6 +12,7 @@
 
 	/* plain box and outline are different from the other styles: */
 	.outline, .box {
+		box-sizing: border-box;
 		padding: .25em 1em .5em 1em;
 		margin: 1em 0;
 	}
@@ -131,7 +132,21 @@
 	mark.green { background-color: #81C784; color: #111; }
 	mark.grey, mark.gray { background-color: #B0BEC5; color: #111; }
 
-	
+	/* text format helper classes: */
+	.nowrap {
+		white-space: nowrap !important;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.small-text {
+		font-size: smaller !important;
+		line-height: 1.4em;
+	}
+	.large-text {
+		font-size: larger !important;
+		line-height: 1.4em;
+	}
+
 	/* grid-layout classes */
 	.grid-2-columns,
 	.grid-3-columns,
@@ -159,6 +174,15 @@
 	.rowspan-3 { grid-row-end: span 3; }
 	.rowspan-4 { grid-row-end: span 4; }
 
+	/* Definition List styles: */
+	dt { font-weight: 600; }
+	dd { margin-left: 1.25em; margin-bottom: .5em; }
+	dl.compact { display: grid; grid-template-columns: min-content auto; }
+	dl.compact dt { grid-column-start: 1; }
+	dl.compact dd { grid-column-start: 2; margin-bottom: 0; }
+
+	/* disclosure and summary: */
+	details summary { cursor: pointer; }
 }
 
 /* RTL Overrides */
