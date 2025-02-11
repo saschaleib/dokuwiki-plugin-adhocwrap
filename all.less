@@ -25,54 +25,61 @@
 
 	/* icon-box classes: */
 	.info, .tip, .important, .alert, .help, .download, .todo {
-		background-image: none;
+		background: transparent .25em center no-repeat;
+		background-size: 1em;
 		box-sizing: border-box;
 		border: @ini_border solid 1px;
 		border-left-width: 4pt;
 		border-radius: .25em;
 		padding: 1pt .25em 1pt 1.5em;
 		margin: .5em 0;
-		position: relative;
-	}
-	.info::before, .tip::before, .important::before,
-	.alert::before, .help::before, .download::before,
-	.todo::before {
-		content: ' ';
-		background: transparent center/1em no-repeat;
-		position: absolute;
-		width: 1em;
-		height: 1em;
-		left: .25em;
-		right: initial;
-		top: .1em;
-		filter: opacity(90%);
+		/* position: relative; */
 	}
 	
 	.outline { border: #CCC solid 2pt; padding-left: .5em; }
 	.outline.filled { background-color: #EEE; }
 
-	.info { border-left-color: #0085F2; background-color: #E5F3FE;}
-	.info::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEzLDlIMTFWN0gxM00xMywxN0gxMVYxMUgxM00xMiwyQTEwLDEwIDAgMCwwIDIsMTJBMTAsMTAgMCAwLDAgMTIsMjJBMTAsMTAgMCAwLDAgMjIsMTJBMTAsMTAgMCAwLDAgMTIsMloiIHN0eWxlPSJmaWxsOiMwMDg1RjI7IiAvPjwvc3ZnPg==");
+	.info {
+		border-left-color: #0085F2;
+		background-color: #E5F3FE;
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEzLDlIMTFWN0gxM00xMywxN0gxMVYxMUgxM00xMiwyQTEwLDEwIDAgMCwwIDIsMTJBMTAsMTAgMCAwLDAgMTIsMjJBMTAsMTAgMCAwLDAgMjIsMTJBMTAsMTAgMCAwLDAgMTIsMloiIHN0eWxlPSJmaWxsOiMwMDg1RjI7IiAvPjwvc3ZnPg==");
 	}
 	
-	.tip { border-left-color: #FFCA28; background-color: #FFF9C4; }
-	.tip::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyLDZBNiw2IDAgMCwxIDE4LDEyQzE4LDE0LjIyIDE2Ljc5LDE2LjE2IDE1LDE3LjJWMTlBMSwxIDAgMCwxIDE0LDIwSDEwQTEsMSAwIDAsMSA5LDE5VjE3LjJDNy4yMSwxNi4xNiA2LDE0LjIyIDYsMTJBNiw2IDAgMCwxIDEyLDZNMTQsMjFWMjJBMSwxIDAgMCwxIDEzLDIzSDExQTEsMSAwIDAsMSAxMCwyMlYyMUgxNE0yMCwxMUgyM1YxM0gyMFYxMU0xLDExSDRWMTNIMVYxMU0xMywxVjRIMTFWMUgxM000LjkyLDMuNUw3LjA1LDUuNjRMNS42Myw3LjA1TDMuNSw0LjkzTDQuOTIsMy41TTE2Ljk1LDUuNjNMMTkuMDcsMy41TDIwLjUsNC45M0wxOC4zNyw3LjA1TDE2Ljk1LDUuNjNaIiBzdHlsZT0iZmlsbDojRkY5ODAwOyIgLz48L3N2Zz4=");
+	.tip {
+		border-left-color: #FFCA28;
+		background-color: #FFF9C4;
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyLDZBNiw2IDAgMCwxIDE4LDEyQzE4LDE0LjIyIDE2Ljc5LDE2LjE2IDE1LDE3LjJWMTlBMSwxIDAgMCwxIDE0LDIwSDEwQTEsMSAwIDAsMSA5LDE5VjE3LjJDNy4yMSwxNi4xNiA2LDE0LjIyIDYsMTJBNiw2IDAgMCwxIDEyLDZNMTQsMjFWMjJBMSwxIDAgMCwxIDEzLDIzSDExQTEsMSAwIDAsMSAxMCwyMlYyMUgxNE0yMCwxMUgyM1YxM0gyMFYxMU0xLDExSDRWMTNIMVYxMU0xMywxVjRIMTFWMUgxM000LjkyLDMuNUw3LjA1LDUuNjRMNS42Myw3LjA1TDMuNSw0LjkzTDQuOTIsMy41TTE2Ljk1LDUuNjNMMTkuMDcsMy41TDIwLjUsNC45M0wxOC4zNyw3LjA1TDE2Ljk1LDUuNjNaIiBzdHlsZT0iZmlsbDojRkY5ODAwOyIgLz48L3N2Zz4=");
 	}
 	
-	.important { border-left-color: #FF9800; background-color: #FFE0B2; }
-	.important::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEzIDE0SDExVjlIMTNNMTMgMThIMTFWMTZIMTNNMSAyMUgyM0wxMiAyTDEgMjFaIiBzdHlsZT0iZmlsbDojRjU3QzAwOyIgLz48L3N2Zz4=");}
+	.important {
+		border-left-color: #FF9800;
+		background-color: #FFE0B2;
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEzIDE0SDExVjlIMTNNMTMgMThIMTFWMTZIMTNNMSAyMUgyM0wxMiAyTDEgMjFaIiBzdHlsZT0iZmlsbDojRjU3QzAwOyIgLz48L3N2Zz4=");
+	}
 
-	.alert { border-left-color: #B71C1C; background-color: #FFCDD2; }
-	.alert::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTguMjcsM0wzLDguMjdWMTUuNzNMOC4yNywyMUgxNS43M0wyMSwxNS43M1Y4LjI3TDE1LjczLDNNOC40MSw3TDEyLDEwLjU5TDE1LjU5LDdMMTcsOC40MUwxMy40MSwxMkwxNywxNS41OUwxNS41OSwxN0wxMiwxMy40MUw4LjQxLDE3TDcsMTUuNTlMMTAuNTksMTJMNyw4LjQxIiBzdHlsZT0iZmlsbDojQjcxQzFDOyIgLz48L3N2Zz4=");}
+	.alert {
+		border-left-color: #B71C1C;
+		background-color: #FFCDD2;
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTguMjcsM0wzLDguMjdWMTUuNzNMOC4yNywyMUgxNS43M0wyMSwxNS43M1Y4LjI3TDE1LjczLDNNOC40MSw3TDEyLDEwLjU5TDE1LjU5LDdMMTcsOC40MUwxMy40MSwxMkwxNywxNS41OUwxNS41OSwxN0wxMiwxMy40MUw4LjQxLDE3TDcsMTUuNTlMMTAuNTksMTJMNyw4LjQxIiBzdHlsZT0iZmlsbDojQjcxQzFDOyIgLz48L3N2Zz4=");
+	}
 
-	.help { border-left-color: #7986CB; background-color: #E8EAF6; }
-	.help::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE1LjA3LDExLjI1TDE0LjE3LDEyLjE3QzEzLjQ1LDEyLjg5IDEzLDEzLjUgMTMsMTVIMTFWMTQuNUMxMSwxMy4zOSAxMS40NSwxMi4zOSAxMi4xNywxMS42N0wxMy40MSwxMC40MUMxMy43OCwxMC4wNSAxNCw5LjU1IDE0LDlDMTQsNy44OSAxMy4xLDcgMTIsN0EyLDIgMCAwLDAgMTAsOUg4QTQsNCAwIDAsMSAxMiw1QTQsNCAwIDAsMSAxNiw5QzE2LDkuODggMTUuNjQsMTAuNjcgMTUuMDcsMTEuMjVNMTMsMTlIMTFWMTdIMTNNMTIsMkExMCwxMCAwIDAsMCAyLDEyQTEwLDEwIDAgMCwwIDEyLDIyQTEwLDEwIDAgMCwwIDIyLDEyQzIyLDYuNDcgMTcuNSwyIDEyLDJaIiBzdHlsZT0iZmlsbDojMUEyMzdFOyIgLz48L3N2Zz4=");}
+	.help {
+		border-left-color: #7986CB;
+		background-color: #E8EAF6;
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE1LjA3LDExLjI1TDE0LjE3LDEyLjE3QzEzLjQ1LDEyLjg5IDEzLDEzLjUgMTMsMTVIMTFWMTQuNUMxMSwxMy4zOSAxMS40NSwxMi4zOSAxMi4xNywxMS42N0wxMy40MSwxMC40MUMxMy43OCwxMC4wNSAxNCw5LjU1IDE0LDlDMTQsNy44OSAxMy4xLDcgMTIsN0EyLDIgMCAwLDAgMTAsOUg4QTQsNCAwIDAsMSAxMiw1QTQsNCAwIDAsMSAxNiw5QzE2LDkuODggMTUuNjQsMTAuNjcgMTUuMDcsMTEuMjVNMTMsMTlIMTFWMTdIMTNNMTIsMkExMCwxMCAwIDAsMCAyLDEyQTEwLDEwIDAgMCwwIDEyLDIyQTEwLDEwIDAgMCwwIDIyLDEyQzIyLDYuNDcgMTcuNSwyIDEyLDJaIiBzdHlsZT0iZmlsbDojMUEyMzdFOyIgLz48L3N2Zz4=");
+	}
 
-	.download { border-left-color: #66BB6A; background-color: #E8F5E9; }
-	.download::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDJDMTcuNSAyIDIyIDYuNSAyMiAxMkMyMiAxNy41IDE3LjUgMjIgMTIgMjJDNi41IDIyIDIgMTcuNSAyIDEyQzIgNi41IDYuNSAyIDEyIDJNOCAxN0gxNlYxNUg4VjE3TTE2IDEwSDEzLjVWNkgxMC41VjEwSDhMMTIgMTRMMTYgMTBaIiBzdHlsZT0iZmlsbDojMUI1RTIwOyIgLz48L3N2Zz4=");}
+	.download {
+		border-left-color: #66BB6A;
+		background-color: #E8F5E9;
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDJDMTcuNSAyIDIyIDYuNSAyMiAxMkMyMiAxNy41IDE3LjUgMjIgMTIgMjJDNi41IDIyIDIgMTcuNSAyIDEyQzIgNi41IDYuNSAyIDEyIDJNOCAxN0gxNlYxNUg4VjE3TTE2IDEwSDEzLjVWNkgxMC41VjEwSDhMMTIgMTRMMTYgMTBaIiBzdHlsZT0iZmlsbDojMUI1RTIwOyIgLz48L3N2Zz4=");
+	}
 	
-	.todo { border-left-color: #4DD0E1; background-color: #E0F7FA; }
-	.todo::before { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE3IDE1TDE4IDE5SDIxVjIySDNWMTlINkw3IDE1SDE3TTE1IDhMMTYgMTJIOEw5IDhIMTVNMTMgMUwxNCA1SDEwTDExIDFIMTNaIiBzdHlsZT0iZmlsbDojRjQ1MTFFOyIgLz48L3N2Zz4=");}
+	.todo {
+		border-left-color: #4DD0E1;
+		background-color: #E0F7FA;
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE3IDE1TDE4IDE5SDIxVjIySDNWMTlINkw3IDE1SDE3TTE1IDhMMTYgMTJIOEw5IDhIMTVNMTMgMUwxNCA1SDEwTDExIDFIMTNaIiBzdHlsZT0iZmlsbDojRjQ1MTFFOyIgLz48L3N2Zz4=");
+	}
 	
 	/* modify spacing around headlines within blocks */
 	.outline h1, .outline h2, .outline h3, .outline h4, .outline h5, .outline h6, 
@@ -96,14 +103,12 @@
 	}
 	
 	/* notch down the icons for selected block-level elements: */
-	div.info::before, div.tip::before, div.important::before, div.alert::before, div.help::before, div.download::before, div.todo::before,
-	article.info::before, article.tip::before, article.important::before, article.alert::before, article.help::before, article.download::before, article.todo::before,
-	aside.info::before, aside.tip::before, aside.important::before, aside.alert::before, aside.help::before, aside.download::before, aside.todo::before,
-	section.info::before, section.tip::before, section.important::before, section.alert::before, section.help::before, section.download::before, section.todo::before,
-	figure.info::before, figure.tip::before, figure.important::before, figure.alert::before, figure.help::before, figure.download::before, figure.todo::before {
-		left: .45em;
-		right: .45em;
-		top: 1.25em;
+	div.info, div.tip, div.important, div.alert, div.help, div.download, div.todo,
+	article.info, article.tip, article.important, article.alert, article.help, article.download, article.todo,
+	aside.info, aside.tip, aside.important, aside.alert, aside.help, aside.download, aside.todo,
+	section.info, section.tip, section.important, section.alert, section.help, section.download, section.todo,
+	figure.info, figure.tip, figure.important, figure.alert, figure.help, figure.download, figure.todo {
+		background-position: .5em 1.3em;
 	}
 
 	/* text colours: */
@@ -186,36 +191,47 @@
 }
 
 /* RTL Overrides */
-[dir=rtl] main .info, main *[dir=rtl] .info, main .info[dir=rtl],
-[dir=rtl] main .tip, main *[dir=rtl] .tip, main .tip[dir=rtl],
-[dir=rtl] main .important, main *[dir=rtl] .important, main .important[dir=rtl],
-[dir=rtl] main .alert, main *[dir=rtl] .alert, main .alert[dir=rtl],
-[dir=rtl] main .help, main *[dir=rtl] .help, main .help[dir=rtl],
-[dir=rtl] main .download, main *[dir=rtl] .download, main .download[dir=rtl],
-[dir=rtl] main .todo, main *[dir=rtl] .todo, main .todo[dir=rtl] {
-	padding: 1pt 1.5em 1pt .25em;
-	border-width: 1px 4pt 1px 1px;
-}
-[dir=rtl] main .info::before, main *[dir=rtl] .info::before, main .info[dir=rtl]::before,
-[dir=rtl] main .tip::before, main *[dir=rtl] .tip::before, main .tip[dir=rtl]::before,
-[dir=rtl] main .important::before, main *[dir=rtl] .important::before, main .important[dir=rtl]::before,
-[dir=rtl] main .alert::before, main *[dir=rtl] .alert::before, main .alert[dir=rtl]::before,
-[dir=rtl] main .help::before, main *[dir=rtl] .help::before, main .help[dir=rtl]::before,
-[dir=rtl] main .download::before, main *[dir=rtl] .download::before, main .download[dir=rtl]::before,
-[dir=rtl] main .todo::before, main *[dir=rtl] .todo::before, main .todo[dir=rtl]::before {
-	right: .25em;
-}
-
-	/* notch down the icons for selected block-level elements: */
-	div.info::before, div.tip::before, div.important::before, div.alert::before, div.help::before, div.download::before, div.todo::before,
-	article.info::before, article.tip::before, article.important::before, article.alert::before, article.help::before, article.download::before, article.todo::before,
-	aside.info::before, aside.tip::before, aside.important::before, aside.alert::before, aside.help::before, aside.download::before, aside.todo::before,
-	section.info::before, section.tip::before, section.important::before, section.alert::before, section.help::before, section.download::before, section.todo::before,
-	figure.info::before, figure.tip::before, figure.important::before, figure.alert::before, figure.help::before, figure.download::before, figure.todo::before {
-		left: .45em;
-		top: 1.25em;
+main {
+	[dir=rtl] &,
+	& *[dir=rtl] {
+		.info, .tip, .important, .alert, .help, .download, .todo {
+			padding: 1pt 1.5em 1pt .25em;
+			border-width: 1px 4pt 1px 1px;
+			border-left-color: #CCC;
+			background-position: right .25em center;
+		}
+		div.info, div.tip, div.important, div.alert, div.help, div.download, div.todo,article.info, article.tip, article.important, article.alert, article.help, article.download, article.todo, aside.info, aside.tip, aside.important, aside.alert, aside.help, aside.download, aside.todo, section.info, section.tip, section.important, section.alert, section.help, section.download, section.todo, figure.info, figure.tip, figure.important, figure.alert, figure.help, figure.download, figure.todo {
+			padding-right: 2em;
+			background-position: right .5em 1.3em;
+		}
+		.info { border-right-color: #0085F2; }
+		.tip { border-right-color: #FFCA28; }
+		.important { border-right-color: #FF9800; }
+		.alert { border-right-color: #B71C1C; }
+		.help { border-right-color: #7986CB; }
+		.download { border-right-color: #66BB6A; }
+		.todo { border-right-color: #4DD0E1; }
 	}
+	.info[dir=rtl], .tip[dir=rtl], .important[dir=rtl],
+	.alert[dir=rtl], .help[dir=rtl], .download[dir=rtl], .todo[dir=rtl] {
+		padding: 1pt 1.5em 1pt .25em;
+		border-width: 1px 4pt 1px 1px;
+		border-right-color: #CCC;
+		background-position: right .25em center;
+	}
+	div.info[dir=rtl], div.tip[dir=rtl], div.important[dir=rtl], div.alert[dir=rtl], div.help[dir=rtl], div.download[dir=rtl], div.todo[dir=rtl],article.info[dir=rtl], article.tip[dir=rtl], article.important[dir=rtl], article.alert[dir=rtl], article.help[dir=rtl], article.download[dir=rtl], article.todo[dir=rtl], aside.info[dir=rtl], aside.tip[dir=rtl], aside.important[dir=rtl], aside.alert[dir=rtl], aside.help[dir=rtl], aside.download[dir=rtl], aside.todo[dir=rtl], section.info[dir=rtl], section.tip[dir=rtl], section.important[dir=rtl], section.alert[dir=rtl], section.help[dir=rtl], section.download[dir=rtl], section.todo[dir=rtl], figure.info[dir=rtl], figure.tip[dir=rtl], figure.important[dir=rtl], figure.alert[dir=rtl], figure.help[dir=rtl], figure.download[dir=rtl], figure.todo[dir=rtl] {
+		padding-right: 2em;
+		background-position: right .5em 1.3em;
+	}
+	.info[dir=rtl] { border-right-color: #0085F2; }
+	.tip[dir=rtl] { border-right-color: #FFCA28; }
+	.important[dir=rtl] { border-right-color: #FF9800; }
+	.alert[dir=rtl] { border-right-color: #B71C1C; }
+	.help[dir=rtl] { border-right-color: #7986CB; }
+	.download[dir=rtl] { border-right-color: #66BB6A; }
+	.todo[dir=rtl] { border-right-color: #4DD0E1; }
 
+}
 
 /* dark mode overrides */
 @media (prefers-color-scheme: dark) {
