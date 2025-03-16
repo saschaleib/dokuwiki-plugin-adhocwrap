@@ -1,7 +1,7 @@
 base     adhocwrap
 author   Sascha Leib
 email    sascha.leib(at)kolmio.com
-date     2025-02-11
+date     2025-03-16
 name     Ad-Hoc Wrap Plugin
 desc     Replacing the WRAP plugin, building upon the code already present in the "Ad Hoc Tags" plugin (under development!)
 url      https://www.dokuwiki.org/plugin:adhocwrap

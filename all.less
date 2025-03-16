@@ -3,7 +3,7 @@
  * @author Sascha Leib <sascha@leib.be>
  */
  
- main {
+main {
 	/* simplified spacing in boxes: */
 	.outline > *, .box > *, .info > *, .tip > *, .important > *,
 	.alert > *, .help > *, .download > *, .todo > * {
@@ -151,6 +151,34 @@
 		font-size: larger !important;
 		line-height: 1.4em;
 	}
+	.clear-right {
+		clear: right;
+	}
+	.clear-left {
+		clear: left;
+	}
+	.clear {
+		clear: both;
+	}
+
+	/* repeating the float classes from the Ad-Hominem template: */
+	.float-left, .float-right {
+		width: 50%;
+		max-width: 220px;
+		min-width: 150px;
+		font-size: smaller;
+		line-height: 1.5em;
+	}
+	&.float-left {
+		clear: left;
+		float: left;
+		margin-right: .5em;
+	}
+	&.float-right {
+		clear: right;
+		float: right;
+		margin-left: .5em;
+	}
 
 	/* grid-layout classes */
 	.grid-2-columns,
@@ -287,7 +315,7 @@ main {
 
 /* layout overrides for narrow screens: */
 @media (max-width: 670px) {
-	main {
+	body.dokuwiki main {
 		.grid-2-columns,
 		.grid-3-columns {
 			grid-template-columns: 100%;
@@ -300,6 +328,14 @@ main {
 		.colspan-3,
 		.colspan-4 { grid-column-end: span 1; }
 
+		.float-left, .float-right {
+			float: none;
+			clear: both;
+			width: initial;
+			max-width: initial;
+			min-width: initial;
+			margin: 0;
+		}
 	}
 }
 @media (max-width: 440px) {
