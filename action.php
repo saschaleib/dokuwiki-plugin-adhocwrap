@@ -88,7 +88,7 @@ class action_plugin_adhocwrap extends DokuWiki_Action_Plugin {
 					'type'		=> 'format',
 					'title'		=> 'Illustration block, floating left, with border and outline (aside+figure)',
 					'icon'		=> '../../plugins/adhocwrap/images/float-block-left.svg',
-					'open'		=> '<aside float-left><figure box>\n',
+					'open'		=> '<aside float-left><figure outline box>\n',
 					'close'		=> '\n<figcaption centered>Figure caption here</figcaption>\n</figure></aside>',
 					'sample'	=> 'Figure content'
 				),
@@ -147,6 +147,22 @@ class action_plugin_adhocwrap extends DokuWiki_Action_Plugin {
 					'open'		=> '<mark grey>',
 					'close'		=> '</mark>',
 					'sample'	=> 'Grey marked text'
+				),
+				array(
+					'type'		=> 'format',
+					'title'		=> 'Maximum emphasis',
+					'icon'		=> '../../plugins/adhocwrap/images/strong-emphasis.svg',
+					'open'		=> '<strong large-text red>',
+					'close'		=> '</strong>',
+					'sample'	=> 'Emphasis'
+				),
+				array(
+					'type'		=> 'format',
+					'title'		=> 'Small grey text',
+					'icon'		=> '../../plugins/adhocwrap/images/small-text.svg',
+					'open'		=> '<small grey>',
+					'close'		=> '</small>',
+					'sample'	=> 'side content'
 				)
 				
 			)
