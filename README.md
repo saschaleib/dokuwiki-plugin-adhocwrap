@@ -14,4 +14,5 @@ Features include:
 * Support for Dark Mode (specific for the [Ad-Hominem Template](https://github.com/saschaleib/dokuwiki-template-ad-hominem))
   
 
-More information and examples on the [Demo Webpage](https://fallacies.online/wiki/playground/adhocplugins).
+More information and examples on the [Demo Webpage](https://leib.be/sascha/projects/dokuwiki/ad-hoc/wrap).
+
